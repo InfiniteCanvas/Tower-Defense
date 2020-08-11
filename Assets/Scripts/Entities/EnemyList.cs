@@ -1,18 +1,29 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using Sirenix.OdinInspector;
 
-public class EnemyList : MonoBehaviour
+namespace TowerDefense.Entities
 {
-    // Start is called before the first frame update
-    void Start()
+    using System.Collections;
+    using System.Collections.Generic;
+    using UnityEngine;
+    
+    [CreateAssetMenu]
+    public class EnemyList : SerializedScriptableObject
     {
-        
-    }
+        private List<Enemy> _enemies;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        private EnemyList()
+        {
+            _enemies = new List<Enemy>();
+        }
+
+        public void AddEnemy(Enemy enemy)
+        {
+            _enemies.Add(enemy);
+        }
+
+        public void RemoveEnemy(Enemy enemy)
+        {
+            _enemies.Remove(enemy);
+        }
     }
 }
