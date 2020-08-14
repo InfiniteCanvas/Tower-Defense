@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8b3b4faa176e304dbee9883582ba480, type: 3}
-  m_Name: New Enemy List
+  m_Script: {fileID: 11500000, guid: beeee31d549bd3641aca6c4505f2e083, type: 3}
+  m_Name: EnemyEvent
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
