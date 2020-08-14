@@ -268,7 +268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e807ec0271aca846b8044b8e5c3216c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnEvent: {fileID: 11400000, guid: f324e92c9cadb804b9b4c7c730dbdd10, type: 2}
+  SpawnEvent: {fileID: 11400000, guid: 477a9c5f4de25dd4995135eab374513a, type: 2}
   EnemyList: {fileID: 11400000, guid: 03c20c0576bfcaa44abd34259f6d97b9, type: 2}
 --- !u!114 &1718886122
 MonoBehaviour:
@@ -297,7 +297,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-  Event: {fileID: 11400000, guid: f324e92c9cadb804b9b4c7c730dbdd10, type: 2}
+  Event: {fileID: 11400000, guid: 477a9c5f4de25dd4995135eab374513a, type: 2}
 --- !u!4 &1718886123
 Transform:
   m_ObjectHideFlags: 0
