@@ -3,13 +3,22 @@ using System.Linq;
 using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
+using TowerDefense.Entities;
 using UnityEngine;
 
-namespace TowerDefense.Entities
+namespace TowerDefense.System
 {
     [CreateAssetMenu(order = 10, fileName = "EnemyList", menuName = "Tower Defense Game/Enemy List")]
     public class EnemyList : SerializedScriptableObject
     {
+#if UNITY_EDITOR
+        //Clear list on every startup of play mode
+        private void OnEnable()
+        {
+            _enemies.Clear();
+        }
+#endif
+
         [SerializeField]
         private Dictionary<int, Enemy> _enemies = new Dictionary<int, Enemy>();
 

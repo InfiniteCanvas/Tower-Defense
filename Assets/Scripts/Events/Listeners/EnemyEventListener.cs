@@ -4,13 +4,18 @@ using UnityEngine.Events;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 namespace TowerDefense.Events
 {
     public class EnemyEventListener : MonoBehaviour
     {
-        public EnemyUnityEvent Response;
+        [TextArea]
+        public string EventInfo;
+
         public EnemyEvent Event;
+        [Space(10)]
+        public EnemyUnityEvent Response;
 
         private void OnEnable()
         {

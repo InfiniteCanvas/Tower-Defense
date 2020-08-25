@@ -123,6 +123,114 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &369351343
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 369351346}
+  - component: {fileID: 369351345}
+  - component: {fileID: 369351344}
+  m_Layer: 0
+  m_Name: EnemyListUpdater
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &369351344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369351343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c98ecdc29ea74c40bb32e0b5966ce0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventInfo: 'Enemy Death Event
+
+    Enemies that die get removed from the enemy
+    list'
+  Event: {fileID: 11400000, guid: a184da5a42da3eb4aa707f4fc14dece9, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 03c20c0576bfcaa44abd34259f6d97b9, type: 2}
+        m_TargetAssemblyTypeName: TowerDefense.System.EnemyList, Assembly-CSharp
+        m_MethodName: RemoveEnemy
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &369351345
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369351343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c98ecdc29ea74c40bb32e0b5966ce0a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  EventInfo: 'Enemy Spawn Event
+
+    Enemies that are spawned get added to the enemy
+    list'
+  Event: {fileID: 11400000, guid: 477a9c5f4de25dd4995135eab374513a, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 03c20c0576bfcaa44abd34259f6d97b9, type: 2}
+        m_TargetAssemblyTypeName: TowerDefense.System.EnemyList, Assembly-CSharp
+        m_MethodName: AddEnemy
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6280657087743280763, guid: d1a1e9720e8ff1d4c92bfc0e12e1f67b, type: 3}
+        m_TargetAssemblyTypeName: TowerDefense.Entities.Tower, Assembly-CSharp
+        m_MethodName: RefreshEnemyList
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!4 &369351346
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 369351343}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1687258581
 GameObject:
   m_ObjectHideFlags: 0
@@ -200,8 +308,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1687258581}
-  m_LocalRotation: {x: -0.022957042, y: 0.97606146, z: -0.17338957, w: -0.12927918}
-  m_LocalPosition: {x: 2.32, y: 1.203, z: 2.378}
+  m_LocalRotation: {x: 0.0068132533, y: -0.95411026, z: 0.021765832, w: 0.29858586}
+  m_LocalPosition: {x: 4.051321, y: 0.54733795, z: 2.8459225}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -247,7 +355,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1718886123}
-  - component: {fileID: 1718886122}
   - component: {fileID: 1718886121}
   m_Layer: 0
   m_Name: Spawner
@@ -268,36 +375,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e807ec0271aca846b8044b8e5c3216c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SpawnEvent: {fileID: 11400000, guid: 477a9c5f4de25dd4995135eab374513a, type: 2}
-  EnemyList: {fileID: 11400000, guid: 03c20c0576bfcaa44abd34259f6d97b9, type: 2}
---- !u!114 &1718886122
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1718886120}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c98ecdc29ea74c40bb32e0b5966ce0a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Response:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1718886121}
-        m_TargetAssemblyTypeName: TowerDefense.System.Spawner, Assembly-CSharp
-        m_MethodName: TestResponse
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  Event: {fileID: 11400000, guid: 477a9c5f4de25dd4995135eab374513a, type: 2}
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  _spawnEvent: {fileID: 11400000, guid: 477a9c5f4de25dd4995135eab374513a, type: 2}
+  _enemyList: {fileID: 11400000, guid: 03c20c0576bfcaa44abd34259f6d97b9, type: 2}
+  EnemyPrefab: {fileID: 6521461065926003560, guid: 4bea037c1bf42e942aa4228fabaf354e, type: 3}
+  _spawnFrequency: 1
 --- !u!4 &1718886123
 Transform:
   m_ObjectHideFlags: 0
@@ -306,7 +396,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1718886120}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.4625673, y: -2.9627628, z: -1.0892397}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
